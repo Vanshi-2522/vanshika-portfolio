@@ -24,6 +24,15 @@ header {
   z-index: 100;
 }
 
+.menu-toggle {
+  display: none;
+  background: transparent;
+  border: none;
+  color: white;
+  font-size: 28px;
+  cursor: pointer;
+}
+
 .logo {
   color: white;
   font-size: 30px;
@@ -663,53 +672,200 @@ footer {
 }
 
 /* ================= RESPONSIVE ================= */
-
 @media (max-width: 768px) {
+  /* ================= MOBILE HEADER ================= */
+
   #home {
+    min-height: auto;
+  }
+  
+  header {
+    flex-direction: row;
+    padding: 15px 5%;
+    position: sticky;
+    top: 0;
+  }
+
+  .logo {
+    font-size: 24px;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  nav {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: #0f172a;
+    flex-direction: column;
+    align-items: center;
+    padding: 15px 0;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+  }
+
+  nav.active {
+    display: flex;
+  }
+
+  nav a {
+    margin: 0;
+    padding: 10px 0;
+    font-size: 15px;
+    width: 100%;
+    text-align: center;
+  }
+
+  nav a::after {
+    display: none;
+  }
+
+  /* ================= HOME ================= */
+
+  #home {
+    min-height: auto;
+    padding: 80px 6% 60px;
     flex-direction: column;
     text-align: center;
+    gap: 35px;
+  }
+
+  .home-text {
+    max-width: 100%;
+  }
+
+  .home-text h1 {
+    font-size: 38px;
+  }
+
+  .home-text h2 {
+    font-size: 24px;
+  }
+
+  .home-text p {
+    font-size: 15px;
+    line-height: 1.6;
+  }
+
+  .home-buttons {
+    margin-top: 25px;
+  }
+
+  .btn {
+    padding: 11px 18px;
+    font-size: 14px;
+  }
+
+  .btn-secondary {
+    margin-left: 6px;
   }
 
   .home-image {
     justify-content: center;
+    width: 100%;
   }
 
   .home-image img {
     width: 90%;
+    max-width: 400px;
   }
 
-  header {
-    flex-direction: column;
-    gap: 15px;
-    padding: 15px 5%;
-  }
-
-  nav {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 12px;
-  }
-
-  nav a {
-    margin-left: 0;
-    font-size: 14px;
-  }
+  /* ================= SECTIONS ================= */
 
   .section-title {
-    font-size: 32px;
+    font-size: 30px;
+    margin: 40px 0 25px;
   }
 
-  .profiles-container {
-    grid-template-columns: 1fr;
+  #about,
+  #skills,
+  #experience,
+  #projects,
+  #certifications,
+  #achievements,
+  #profiles,
+  #contact {
+    padding: 60px 6%;
   }
 
-  .contact-container {
+  /* ================= SKILLS ================= */
+
+  .skills-container {
     grid-template-columns: 1fr;
+    gap: 25px;
   }
+
+  /* ================= EXPERIENCE ================= */
+
+  .experience-container {
+    grid-template-columns: 1fr;
+    gap: 25px;
+    margin-top: 30px;
+  }
+
+  /* ================= PROJECTS ================= */
+
+  .projects-container {
+    grid-template-columns: 1fr;
+    gap: 30px;
+    margin-top: 35px;
+  }
+
+  .project-content {
+    padding: 18px;
+  }
+
+  .project-content h3 {
+    font-size: 21px;
+  }
+
+  .project-content p {
+    font-size: 15px;
+  }
+
+  .project-links {
+    margin-top: 20px;
+  }
+
+  /* ================= CERTIFICATIONS ================= */
 
   .certifications-container {
     grid-template-columns: 1fr;
+    gap: 25px;
+    margin-top: 30px;
+  }
+
+  /* ================= ACHIEVEMENTS ================= */
+
+  .achievements-container {
+    grid-template-columns: 1fr;
+    gap: 25px;
+    margin-top: 30px;
+  }
+
+  /* ================= PROFILES ================= */
+
+  .profiles-container {
+    grid-template-columns: 1fr;
+    gap: 25px;
+    margin-top: 30px;
+  }
+
+  /* ================= CONTACT ================= */
+
+  .contact-container {
+    grid-template-columns: 1fr;
+    gap: 25px;
+    margin-top: 30px;
+  }
+
+  /* ================= FOOTER ================= */
+
+  footer {
+    padding: 30px 15px;
   }
 }
 
